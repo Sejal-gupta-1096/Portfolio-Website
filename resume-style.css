@@ -40,7 +40,7 @@ section:nth-child(2n + 1){
 	font-weight: 700;
 	font-size: 30px;
 }
-/*nav*/
+
 #body-header{
 	background-image: url(background2.jpeg);
 	background-attachment: fixed;
@@ -78,10 +78,7 @@ section:nth-child(2n + 1){
 	display: none;
 }
 
-@media screen and (max-width:600px) , (max-height:600px){
-	#full-list{
-		display: none;
-	}
+@media screen and (max-width:1000px){
 	#ham-burger{
 		display: inline-block;
 		color: white;
@@ -90,16 +87,45 @@ section:nth-child(2n + 1){
 		margin-right: 2rem;
 	}
 	#body-header{
-		min-height: 300px;
+		min-height: 20rem;
 	}
+
+	header nav{
+		position: absolute;
+		width: 50%;
+		height: 100%;
+		background-color: black;
+		top:0;
+		left: -50%;
+		transition: 0.5s;
+		z-index:100;
+	}
+	
+	body.active2{
+		opacity: 0.9;
+		scroll-behavior: unset;
+	}
+
+	header nav.active{
+		left: 0;
+		opacity: 1;
+	}
+	
+	header nav ul{
+		display: block;
+		text-align: center;
+	}
+
+	.nav-horizontal-list li{
+		display: block;
+	}
+
+	/*header nav ul li a{
+		font-weight: 600;
+	}*/
 
 }
 
-@media screen and (min-height: 800px){
-	#body-header{
-		height: 50vh;
-	}
-} 
 
 /*Name ans social icons*/
 
@@ -177,13 +203,32 @@ section:nth-child(2n + 1){
 	justify-content: space-around;
 }
 
-.progress-parent{
+/*.progress-parent{
 	border-radius: 25px;
 	background-color: darkgrey;
 	height:2rem;
 	width:10rem;
 	margin: 1.5rem;
 	padding: 0px;
+}
+
+.progress-parent>div{
+	 box-shadow: 1px 1px 5px 2px #989882;
+}*/
+
+.progress-parent {
+    width: 11rem;
+    height: 2.2rem;
+    background-color: lightgrey;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 2px 1px #b9b9b9 inset;
+    margin: 25px;
+    overflow: hidden;
+}
+
+ .progress-parent > div {
+    border-radius: 20px 0px 0px 20px;
+    box-shadow: 1px 1px 5px 2px #989882;
 }
 
 #java{
@@ -392,7 +437,7 @@ font-weight: 700;
 /*Projects*/
 
 #projects{
-	height: 100vh;
+	height: auto;
 	display: flex;
 	flex-direction: column;
 	/*border:2px solid black;*/
@@ -400,7 +445,7 @@ font-weight: 700;
 
 
 #projects-display{
-	height:80%;
+	height:50%;
 	width: 90%;
 	align-self: center;
 	/*border:2px solid black;*/
@@ -408,112 +453,161 @@ font-weight: 700;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	cursor: pointer;
 }
 
-#projects-display img{
+/*#projects-display img{
 	height:35vh;
 	width:23vw;
+}*/
+
+.project-image-container {
+    max-width: 300px;
+    overflow: hidden;
+    margin: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
 }
+
+.project-image-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.project-details {
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 90%;
+    color: transparent;
+    text-align: center;
+    padding: 10px;
+}
+
+.project-details p{
+	font-size: 1.5rem;
+}
+
+.project-image-container:hover {
+    box-shadow: 0 0 20px #74ADC8;
+}
+
+.project-image-container:hover .project-details {
+    background-color: #80808078;
+    color: white;
+}
+
 
 /*Education*/
 
 
-#edu-parent{
-	width:70%;
-	height:50rem;
-	/*border:2px solid black;*/
-	display: flex;
-	flex-direction: column;
-	position: relative;
+.timeline {
+    position: relative;
+    width: 75%;
 }
 
-.edu-child{
-	width:40%;
-	height:30%;
-	/*border:2px solid black;*/
-	display: flex;
-	flex-direction: column;
+.timeline-box {
+    padding: 5px;
+    width: 40%;
+    min-height: 150px;
+    position: relative;
+    left: 5%;
+    text-align: right;
 }
 
-.edu-child:nth-child(2n){
-	align-self:flex-end;
+.timeline-box::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: lightgrey;
+    top: 25%;
+    border-radius: 50%;
+    z-index: 1;
 }
 
-#divider{
-	margin: 0;
-	padding: 0;
-	position: absolute;
-	height: 75%;
-	width:0;
-	border:2px dashed #0096fa6b;
-	top:10%;
-	left:50%;
+.timeline-box:nth-child(2n) {
+    left: 53%;
 }
 
-#divider i{
-	margin: 0;
-	font-size: 2.5rem;
-	position: sticky;
-	top: 20%;
-	transform: rotate(135deg);
-	z-index: 1;
-	color: #2857a4;
+.timeline-box:nth-child(2n+1)::after {
+    right: -11.8%;
 }
 
-/*.dots{
-	margin: 0;
-	height:1rem;
-	width:1rem;
-	border-radius: 50%;
-	background-color: grey;
-	z-index: 0;
-}*/
-
-.edu-child{
-	margin: 1rem;
-}
-.edu-child .header{
-	width:100%;
-	height: 50%;
-	/*border:2px solid black;*/
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+.timeline-box:nth-child(2n)::after {
+    left: -9%;
 }
 
-.edu-child .header img{
-	height:3rem;
-	width:3rem;
-	margin: 0.5rem;
+
+.timeline-container {
+    padding: 8px;
 }
 
-.edu-child .header div{
-	display: flex;
-	flex-direction: column;
-}
-.edu-child .header div h2{
-	color: #2857a4;
-	/*border:2px solid black;*/
-	align-self: flex-end;
-	padding: 0;
-	margin: 0;
-	
+.timeline-logo {
+    position: absolute;
+    width: 50px;
+    overflow: hidden;
 }
 
-.edu-child .header div h3{
-	color: darkgrey;
-	padding: 0;
-	margin: 0;
-	align-self: flex-end;
-	/*border:2px solid black;*/
+.timeline-logo > img {
+    width: 100%;
 }
-.edu-child .description{
-	color: grey;
-	width:100%;
-	text-align: justify;
-	height: 50%;
-	/*border:2px solid black;*/
+
+#timeline-divider {
+    position: absolute;
+    width: 0;
+    top: 10%;
+    left: 50%;
+    border: 1px dashed #0096fa6b;
+    height: 66%;
+    color: #433E3F;
 }
+
+#timeline-divider .timeline-traveller {
+    position: sticky;
+    top: 135px;
+    z-index: 2;
+}
+
+#timeline-divider i {
+    transform: rotate(130deg);
+    margin-top: -35px;
+    display: block;
+    color: #2857a4;
+    font-size: 2rem;
+}
+
+.edu-designation {
+    font-size: 1.4rem;
+}
+
+.edu-company-name {
+    margin: 5px 0 0;
+    color: #eb822d;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.edu-duration {
+    color: #9e9b9b;
+    font-weight: 100;
+    color: grey;
+    font-size: 1rem;
+}
+
+.edu-description {
+    font-size: 14px;
+    padding: 2px;
+    color: grey;
+    line-height: 20px;
+}
+
+.text-align-justify {
+    text-align: justify;
+}
+
 
 @media screen and (max-width: 600px){
 	#divider{
@@ -527,4 +621,17 @@ font-weight: 700;
 .edu-child{
 	width:80%;
 }
+}
+
+
+
+.text-highlight{
+	color: #2857a4;
+    font-weight: 700;
+}
+
+.text-highlight a{
+	color: #2857a4;
+    font-weight: 700;
+    text-decoration: none;
 }

@@ -11,7 +11,7 @@
 
 	<header id="body-header">
 		<nav id="full-list">
-			<ul class="horizontal-list">
+			<ul class="nav-horizontal-list horizontal-list">
 				<li><a href="#" >Home</a></li>
 				<li><a href="#about">About</a></li>
 				<li><a href="#skills">Skills</a></li>
@@ -20,9 +20,9 @@
 				<li><a href="#contact">Contact</a></li>
 			</ul>
 		</nav>
-		<nav id="ham-burger">
-			<i class="fa fa-bars" aria-hidden="true"></i>
-		</nav>
+		<div class="menu-toggle">
+			<i id="ham-burger" class="fa fa-bars font-icons" aria-hidden="true"></i>
+		</div>
 		<div id="social-container">
 		<div class="name">
 			<h1>Sejal Gupta</h1>
@@ -46,7 +46,7 @@
 			</div>
 			<div id="description">
 				<p>
-				I am a software developer currently pursuing B.Tech from Chitkara University.This is my potfolio that contains all my skills , projects and achievements.Please go through it .I am a enthusiastic learner and loves to solve new problems every day thus increasing my knowledge.I am looking forward for internships and a platform to showcase my skills.I am a software developer currently pursuing B.Tech from Chitkara University.This is my potfolio that contains all my skills , projects and achievements.Please go through it .I am a enthusiastic learner and loves to solve new problems every day thus increasing my knowledge.I am looking forward for internships and a platform to showcase my skills.
+				I am a student currently pursuing B.Tech from Chitkara University.This is my potfolio that contains everything about me you need to know.I am a enthusiastic learner and loves to solve new problems every day thus increasing my knowledge .Strong in design and integration with intuitive problem-solving skills. Proficient in <span class="text-highlight">JAVA ,HTML , CSS , JAVASCRIPT and AJAX</span> .Passionate about implementing and launching new projects. Ability to translate business requirements into technical solutions. Looking to start the career as an entry-level software engineer with a reputed firm driven by technology. Please go through my projects made using different technologies whose github links are provided below in <span class="text-highlight"><a href="#projects">PROJECT</a></span> Section and in case of any query please mail me at my mail id given in <span class="text-highlight"><a href="#contact">CONTACT</a></span> section.
 			</p>
 			</div>
 		</section>
@@ -69,10 +69,10 @@
 					<div id="css" data-maxValue="75"><span>CSS</span></div>
 				</div>
 				<div class="progress-parent">
-					<div id="js" data-maxValue="60"><span>Java Script</span></div>
+					<div id="js" data-maxValue="70"><span>Java Script</span></div>
 				</div>
 				<div class="progress-parent">
-					<div id="api" data-maxValue="50"><span>API'S</span></div>
+					<div id="api" data-maxValue="75"><span>API'S</span></div>
 				</div>
 				<div class="progress-parent">
 					<div id="node-js" data-maxValue="60"><span>Node JS</span></div>
@@ -84,7 +84,7 @@
 					<div id="database" data-maxValue="70"><span>Databases</span></div>
 				</div>
 				<div class="progress-parent">
-					<div id="git-hub" data-maxValue="50"><span>Git Version</span></div>
+					<div id="git-hub" data-maxValue="70"><span>Git and GitHub</span></div>
 				</div>
 			</div>
 			</div>
@@ -97,13 +97,36 @@
 			</div>
 
 			<div id="projects-display">
-				<a href=""><img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000024_1550237299_codezen.png"></a>
-				<a href=""><img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000024_1550237299_codezen.png"></a>
-				<a href=""><img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000024_1550237299_codezen.png"></a>
-				<a href=""><img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000025_1550237330_codezen_2.png"></a>
-				<a href=""><img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000025_1550237330_codezen_2.png"></a>
-				<a href=""><img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000025_1550237330_codezen_2.png"></a>
-			</div>
+				 <a href="https://github.com/Sejal-gupta-1096/Ping-Pong"><div class="project-image-container">
+                    <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000024_1550237299_codezen.png">
+                    <div class="project-details">
+                        <p>
+                            Its a two player ping pong game made with front end technologies like html , css and javascript . Quite interesting to play around it. Go and check out.
+                        </p>
+                    </div>
+
+                </div></a>
+				
+				 <a href="https://github.com/Sejal-gupta-1096/Music-Player"><div class="project-image-container">
+                    <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000024_1550237299_codezen.png">
+                    <div class="project-details">
+                        <p>
+                           Its a fully functional music player app made with front end technologies like html , css and javascript . U can play music and enjoy the day .
+                        </p>
+                    </div>
+
+                </div></a>
+
+                 <a><div class="project-image-container">
+                    <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000024_1550237299_codezen.png">
+                    <div class="project-details">
+                        <p>
+                            It is a calculator app with basic computations like +,-,/,* and more . go and check it out.
+                        </p>
+                    </div>
+
+                </div></a>
+            </div>
 		</section>
 
 		<section id="edu">
@@ -111,64 +134,55 @@
 				<i class="fa fa-trophy" aria-hidden="true"></i>
 				<h1>Education</h1>
 			</div>
-			<div id="edu-parent">
-				<div class="edu-child">
-					<div class="header">
-						<div>
-							<img src="achieve-img.jpg">
-						</div>
-						<div>
-							<h2>First-Prize</h2>
-					<h3>Hackathon</h3>
-						</div>
-				</div>
-					<div class="description">xxx made this app that consists this this this zzzzzz xxxxx
-					xxx made this app that consists this this this zzzzzz xxxxxxxx made this app that consists this this this zzzzzz</div>
-				</div>
-				<div class="edu-child">
-					<div class="header">
-						<div>
-							<img src="achieve-img.jpg">
-						</div>
-						<div>
-							<h2>First-Prize</h2>
-					<h3>Hackathon</h3>
-						</div>
-				</div>
-					<div class="description">xxx made this app that consists this this this zzzzzz xxxxx
-					xxx made this app that consists this this this zzzzzz xxxxxxxx made this app that consists this this this zzzzzz</div>
-				</div>
-				<div class="edu-child">
-					<div class="header">
-						<div>
-							<img src="achieve-img.jpg">
-						</div>
-						<div>
-							<h2>First-Prize</h2>
-					<h3>Hackathon</h3>
-						</div>
-				</div>
-					<div class="description">xxx made this app that consists this this this zzzzzz xxxxx
-					xxx made this app that consists this this this zzzzzz xxxxxxxx made this app that consists this this this zzzzzz</div>
-				</div>
-				<div class="edu-child">
-					<div class="header">
-						<div>
-							<img src="achieve-img.jpg">
-						</div>
-						<div>
-							<h2>First-Prize</h2>
-					<h3>Hackathon</h3>
-						</div>
-				</div>
-					<div class="description">xxx made this app that consists this this this zzzzzz xxxxx
-					xxx made this app that consists this this this zzzzzz xxxxxxxx made this app that consists this this this zzzzzz</div>
-				</div>
-				<div id="divider">
-						<i class="fa fa-plane" aria-hidden="true"></i>
-					</div>
-				</div>
-			</div>
+
+			<div class="timeline">
+			     <div class="timeline-box left ">
+                    <div class="timeline-container">
+                       <!--  <div class="timeline-logo">
+                            <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000032_1550746413_iiitd_logo.png">
+                        </div> -->
+                        <h3 class="edu-designation  m0 m-blue"> Degree </h3>
+                        <h4 class="edu-company-name "> Sared Heart </h4>
+                        <h5 class="edu-duration m0"> March 2006 - March 2016 </h5>
+
+                        <p class="edu-description text-align-justify">   </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-box right ">
+                    <div class="timeline-container">
+                        <!-- <div class="timeline-logo">
+                            <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000032_1550746413_iiitd_logo.png">
+                        </div> -->
+                        <h3 class="edu-designation  m0 m-blue"> Degree </h3>
+                        <h4 class="edu-company-name "> Spring Valley </h4>
+                        <h5 class="edu-duration m0"> March 2016 - March 2018 </h5>
+                        <p class="edu-description text-align-justify"> </p>
+                    </div>
+                </div>
+
+                <div class="timeline-box left ">
+                    <div class="timeline-container">
+                       <!--  <div class="timeline-logo">
+                            <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000032_1550746413_iiitd_logo.png">
+                        </div> -->
+                        <h3 class="edu-designation  m0 m-blue"> Degree </h3>
+                        <h4 class="edu-company-name "> Chitkara University </h4>
+                        <h5 class="edu-duration m0"> August 2018 </h5>
+
+                        <p class="edu-description text-align-justify"></p>
+                    </div>
+                </div>
+                
+                <div id="timeline-divider">
+                    <div class="timeline-traveller">
+                        <div>
+                            <i class="fa fa-plane"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
 
 		</section>
 		<section id="contact">
@@ -190,7 +204,7 @@
 					<div>
 						<div><i class="fa fa-map-marker" aria-hidden="true"></i><span>Punjab, India</span></div>
 					<div><i class="fa fa-mobile" aria-hidden="true"></i><span>9316717XXX</span></div>
-					<div><i class="fa fa-envelope-o" aria-hidden="true"></i><span>sejalgupta19122000@gmail.com</span></div>
+					<div><i class="fa fa-envelope-o" aria-hidden="true"></i><span>sejalg1096@gmail.com</span></div>
 				</div>
 				</div>
 			</div>
@@ -205,6 +219,15 @@
 		</section>
 	</main>
 	
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+         <script type="text/javascript">
+  	        $(document).ready(function(){
+  		        $('.menu-toggle').click(function(){
+  			    $('body').toggleClass('active2');
+  			    $('nav').toggleClass('active');
+  		    });
+  	   });
+  </script>
    <script type="text/javascript" src="resume-js.js"></script>
 </body>
 </html>
